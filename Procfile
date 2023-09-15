@@ -1,0 +1,1 @@
+web : puthon manage.py && migrate gunicorn taskmate.wsgi
