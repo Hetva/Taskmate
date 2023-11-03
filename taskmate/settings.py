@@ -71,12 +71,25 @@ WSGI_APPLICATION = 'taskmate.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': env("DJANGO_DB_NAME"), 
+#     }
+# }
+
+DATABASES ={
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': env("DJANGO_DB_NAME"), 
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': '54321',
+        'HOST': 'localhost',
+        'PORT': '54321',
     }
 }
+
+# mysql://root:UcZ4hdLrJNbt1qWaquZi@containers-us-west-49.railway.app:6556/railway
 
 
 # Password validation
