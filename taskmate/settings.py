@@ -39,6 +39,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -88,6 +89,9 @@ DATABASES ={
         'PORT': env("DJANGO_DB_PORT"),
     }
 }
+
+# postgres://postgres:g1EeA5GdEGbgbcCBG*G3FF-dABccAEd4@postgres.railway.internal:5432/railway
+# postgres://postgres:g1EeA5GdEGbgbcCBG*G3FF-dABccAEd4@monorail.proxy.rlwy.net:42412/railway
 
 # mysql://root:UcZ4hdLrJNbt1qWaquZi@containers-us-west-49.railway.app:6556/railway
 
